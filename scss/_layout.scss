@@ -1,0 +1,40 @@
+@use 'variaveis' as *;
+@use 'mixins' as *;
+
+.header {
+  background-color: $cor-primaria;
+  padding: $espacamento;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.banner {
+  height: 60vh;
+  @include flex-center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #d8f3dc, $cor-primaria);
+  text-align: center;
+}
+
+.section {
+  padding: $espacamento * 3;
+
+  &__title {
+    margin-bottom: $espacamento;
+  }
+
+  &--highlight {
+    background-color: lighten($cor-primaria, 20%);
+  }
+}
+
+@media (max-width: 768px) {
+  .header__content {
+    flex-direction: column;
+    gap: $espacamento;
+  }
+}

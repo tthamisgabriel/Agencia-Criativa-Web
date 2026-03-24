@@ -1,0 +1,15 @@
+@use 'variaveis' as *;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin botao {
+  padding: 0.8rem;
+  background-color: $cor-secundaria;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
